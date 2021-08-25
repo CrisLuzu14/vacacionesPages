@@ -1,85 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+        table {
+          font-family: arial, sans-serif;
+          width: 100%;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+          border-right: 1px solid black;
+          border-left: 1px inset black;;
+        }
+        
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: #04AA6D;
+        }
+        </style>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Porduct</title>
-    <style>
-        body{
-            padding: 0;
-            margin: 0;
-            font-family:sans-serif;
-        }
-        main{
-            padding: 1rem;
-        }
-        .main-header{
-            width: 100%;
-            height: 3.5rem;
-            padding: 0 1.5rem;
-            background: #E4002B;
-        }
-        .main-header__nav{
-            height: 100%;
-            display: flex;
-            align-items: center;
-        }
-        .main-header__item-list{
-            list-style: none;
-            margin: 0%;
-            padding: 0;
-            display: flex;
-        }
-        .main-header__item{
-            margin: 0 1rem;
-            padding: 0;
-        }
-        .main-header__item a{
-            text-decoration: none;
-            color: white;
-            margin: 0 5px;
-        }
-        .main-header__item a:hover,
-        .main-header__item a:active,
-        .main-header__item a.active{
-            color: turquoise;
-        }
-        .form-control label,
-        .form-control input{
-            color: #6200ff;
-        }
-        .form-control input,
-        .form-control input{
-            display: block;
-        }
-
-        .form-control input{
-            border: 1px solid #dbc441;
-            font: inherit;
-            border-radius: 2px;
-        }
-        button{
-            border: 1px solid #dbc441;
-            color: #dbc441;
-            background: white;
-            border-radius: 3px;
-            cursor: pointer;
-            margin:5px 0;
-        }
-        button:hover, button:active{
-            background-color: #6200ff;
-            color: white;
-        }
-    </style>
+    <ul>
+        <li class="main-header__item"><a  href="">Ingreso</a></li>
+                <li class="main-header__item"><a  href="">Nombramiento</a></li>
+                <li class="main-header__item"><a  href="">Ascenso</a></li>
+                <li class="main-header__item"><a  href="">Subrogación</a></li>
+                <li class="main-header__item"><a  href="">Encargo</a></li>
+                <li class="main-header__item"><a  href="formatovacaciones.html">Vacaciones</a></li>
+                <li class="main-header__item"><a class="active" href="vacaciones.html">Regresar</a></li>
+      </ul>
 </head>
+
+
+
 <body>
     <header class="main-header">
         <nav class="main-header__nav">
-            <ul class="main-header__item-list">
-                <li class="main-header__item"><a  href="/">Vacaciones</a></li>
-                <li class="main-header__item"><a class="active" href="/add-vacaciones">Nuevo Registro</a></li>
-            </ul>
         </nav>
     </header>
     <main>
