@@ -1,19 +1,30 @@
 {
   "name": "vacaciones",
   "version": "1.0.0",
-  "description": "",
+  "description": "guarda información de vacaciones",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "sta",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "firebase-admin": "^9.11.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StalinSoriano/vacacionesPages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StalinSoriano/vacacionesPages/issues"
+  },
+  "homepage": "https://github.com/StalinSoriano/vacacionesPages#readme"
 }
