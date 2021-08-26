@@ -1,95 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Porduct</title>
-    <style>
-        body{
-            padding: 0;
-            margin: 0;
-            font-family:sans-serif;
-        }
-        main{
-            padding: 1rem;
-        }
-        .main-header{
-            width: 100%;
-            height: 3.5rem;
-            padding: 0 1.5rem;
-            background: #E4002B;
-        }
-        .main-header__nav{
-            height: 100%;
-            display: flex;
-            align-items: center;
-        }
-        .main-header__item-list{
-            list-style: none;
-            margin: 0%;
-            padding: 0;
-            display: flex;
-        }
-        .main-header__item{
-            margin: 0 1rem;
-            padding: 0;
-        }
-        .main-header__item a{
-            text-decoration: none;
-            color: white;
-            margin: 0 5px;
-        }
-        .main-header__item a:hover,
-        .main-header__item a:active,
-        .main-header__item a.active{
-            color: turquoise;
-        }
-        .form-control label,
-        .form-control input{
-            color: #6200ff;
-        }
-        .form-control input,
-        .form-control input{
-            display: block;
-        }
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        .form-control input{
-            border: 1px solid #dbc441;
-            font: inherit;
-            border-radius: 2px;
-        }
-        button{
-            border: 1px solid #dbc441;
-            color: #dbc441;
-            background: white;
-            border-radius: 3px;
-            cursor: pointer;
-            margin:5px 0;
-        }
-        button:hover, button:active{
-            background-color: #6200ff;
-            color: white;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <title>Empresa</title>
+    
 </head>
 <body>
-    <header class="main-header">
-        <nav class="main-header__nav">
-            <ul class="main-header__item-list">
-                <li class="main-header__item"><a  href="/">Vacaciones</a></li>
-                <li class="main-header__item"><a class="active" href="/add-vacaciones">Nuevo Registro</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <form class="product-form" action="/vacaciones" method="post">
-            <div class="form-control">
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title">
-            </div>
-            <button type="submit">Add Product</button>
-        </form>
-    </main>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/ingreso">Solicitud Vacaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/nombramiento">Nombramiento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/subrogacion">Subrogación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/encargo">Encargo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/vacaciones">Vacaciones</a>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+   </header>
+   <h1>solicitud vacaciones</h1>
+  
 </body>
 </html>
