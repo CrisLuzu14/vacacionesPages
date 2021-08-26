@@ -1,13 +1,13 @@
 const path = require('path');
 const express= require('express');//importa la libreria express
 const app =express();//llamas al metodo express
-const formRoute= require('./routes/form')
+const homeRoute= require('./routes/home')
 const vacacionesRoute=require('./routes/vacaciones')
 app.use(express.urlencoded({extended:true})) //sirve para poder tomar los argumentos del get o post
-app.use(formRoute)
+app.use(homeRoute)
 app.use(vacacionesRoute)
 app.use((req,res,next)=>{
-   
+    
     res.status(404).sendFile(path.join(__dirname,'views','404.html'))
 })
 app.listen(3000)//de esta manera queda mas simple y ya no se necesita utilizar el require('http')
