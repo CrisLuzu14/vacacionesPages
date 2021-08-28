@@ -1,8 +1,23 @@
 const path = require('path');
 const express= require('express');//importa la libreria express
+
 const app =express();//llamas al metodo express
 const homeRoute= require('./routes/home')
 const vacacionesRoute=require('./routes/vacaciones')
+const mongoose = require('mongoose')
+const mongooseUrl='mongodb+srv://TalentHuman:TalentHuman@vacaciones.qspdv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+mongoose.connect(mongooseUrl,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+})
+
+mongoose.connection.on('connected',()=>{
+    console.log('mongoose connect')
+})
+
+
+
+
 app.use(express.urlencoded({extended:true})) //sirve para poder tomar los argumentos del get o post
 app.use(homeRoute)
 app.use(vacacionesRoute)
