@@ -14,6 +14,8 @@ router.post('/empleados',(req,res,next)=>{//el métod use recibe 3 paramatros re
             if(pass==='123') {
                 res.render('empleados',{'usuario':user})
                 //res.sendFile(path.join(rootDir,'views','add-vacaciones.html')) 
+            }else{
+                res.redirect('/')
             }
         }else{
             res.redirect('/')
