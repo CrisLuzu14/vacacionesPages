@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Solicitudes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+  <style>
+    /* Estilos de etiqueta*/
+
+
+table {/* 
+  background: white; */
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2%;
+  border-collapse: collapse;
+  border-color: black;
+  text-align: center;
+}
+
+th {
+  /* background-color: rgba(5, 5, 100, 95); */
+  height: 35px;
+  border-bottom: 1px solid rgb(210, 220, 250);
+  border-color: black;
+  color: rgb(0, 0, 0);
+}
+
+td {
+    color:black;
+  height: 30px;
+  border: 0.5px solid rgba(240, 240, 240, 10);
+  border-color: black;
+  text-align: left;
+}
+
+.mipar {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-weight: 400;
+  white-space: nowrap;
+  /* opacity: 0; */
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+
+tfoot {
+  font-weight: bold;
+}
+
+/*Pseudo-clases*/
+/* th:hover {
+  background-color: rgba(20, 20, 20, 90);
+}
+
+tr:hover {
+  background-color: rgba(15, 25, 25, 90);
+} */
+
+/* Estililos de clases*/
+.PrecioTotal:hover,
+.CantidadTotal:hover {
+  color: rgb(230, 50, 50);
+}
+
+.Cabecera {/* 
+  background-color: rgba(255, 255, 255, 0.99); */
+  border-radius: 4px;
+  height: 30px;
+  padding: 2em;
+  margin: 0 25%;
+  text-align: center;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(7, 7, 7);
+  font-size: 14pt;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+ 
+}
+
+table {
+  font-family: arial, sans-serif;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px inset black;
+
+}
+
+.padding {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+}
+    
+  </style>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">Talento Humano</a></div>
+        <ul class="links">
+          <li><a href="listado.html">Lista de Empleados</a></li>
+          <li><a href="nuevo_usuario.html">Usuarios</a></li>
+          <li>
+            <a href="#" class="desktop-link">Solicitudes</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Solicitudes</label>
+            <!-- ul>
+              <li><a href="#">Drop Menu 1</a></li>
+              <li><a href="#">Drop Menu 2</a></li>
+              <li><a href="#">Drop Menu 3</a></li>
+              <li><a href="#">Drop Menu 4</a></li>
+            </ul> -->
+          </li>
+          <li>
+            <a href="#" class="desktop-link">Vacio</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">vacio</label> 
+<!--             <ul>
+              <li><a href="#">Drop Menu 1</a></li>
+              <li><a href="#">Drop Menu 2</a></li>
+              <li><a href="#">Drop Menu 3</a></li>
+              <li>
+                <a href="#" class="desktop-link">More Items</a>
+                <input type="checkbox" id="show-items">
+                <label for="show-items">More Items</label>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li>
+            </ul> -->
+          </li>
+          <li><a href="pagina_principal.html">Salir</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+  
+  <section class="padding">
+    <header class="Cabecera">
+        <h3> </h3>
+      </header>
+   <table> <!-- Lo cambiaremos por CSS -->
+          <P class="mipar"> SOLICITUD DE TALENTO HUMANO</P>
+            <tr>
+                <td colspan="7"> <img src="./assets/abg.png" width="500" height="130"></td>
+                 <td  colspan="5"> ACCION DE PERSONAL <br> No. <br>ABG-UAH-ACP-2021- numero secuencial
+               <br> fecha automatico </td>
+            </tr>
+            
+            <tr>
+         <TD colspan="12">
+     DECRETO: <label><input type="checkbox"></label>
+     ACUERDO: <label><input type="checkbox"> </label>
+     RESOLUCION: <label><input type="checkbox"> </label>
+        <br> 
+     NO.__________  FECHA:_______</td>
+            </tr>
+            
+            <tr>
+         <td style="text-align:center;"colspan="12">
+         NOMBRE DEL EMPLEADO<br> 
+         APELLIDOS NOMBRES </td>
+            </tr> 
+            
+              <tr>
+            <td style="text-align:center" colspan="4">No. de Cedula de Ciudadanìa</td>
+            <td style="text-align:center" colspan="4">Desde</td>
+            <td style="text-align:center" colspan="4">Hasta</td>
+        </tr>
+             <tr>
+            <td style="text-align:center" colspan="4">No de la base de datos</td>
+            <td style="text-align:center" colspan="4"><input type="date" id="calendar" name="calendar"></td>
+            <td style="text-align:center" colspan="4"><input type="date" id="calendar" name="calendar"></td>
+        </tr>
+             
+             <tr>
+               <td colspan="12">EXPLICACIÒN: (Opcional:Adjuntar Anexo<br> 
+                La Directora Ejecutiva de la ABG en uso de sus facultades y de conformidad con el Art. <input type="text"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' style="width : 20px" id="art" name="art"> de la Ley Organica del Servicio Publico, y en concordancia con el Art. 28 del Reglamento a la LOSEP, se concede <input type="text" style="width : 250px" id="vca" name="vca">, segun Memorando Nro. <input type="text" style="width : 200px" id="memo" name="memo"> de fecha <input type="date" id="calendar" name="calendar">. </td>
+        </tr>
+             
+             <tr>
+      <TD colspan="1">
+     INGRESO: <input type="checkbox"></label><BR>
+     NOMBRAMIENTO<input type="checkbox"> </label><BR>
+     ASCENSO <input type="checkbox"> </label><BR>
+     SUBROGACIO<input type="checkbox"> </label><BR>
+     ENCARGO<input type="checkbox"> </label><BR>
+     VACACIONES <input type="checkbox">
+       </TD>
+                  
+       <TD colspan="1">
+       TRASLADO <input type="checkbox"> </label><BR>
+       TRASPASO <input type="checkbox"> </label><BR>
+       CAMBIO ADMINISTRATIVO<input type="checkbox"> </label><BR>
+       INTERCAMBIO <input type="checkbox"> </label><BR>
+       COMISION DE SERVICIOS <input type="checkbox"> </label><BR>
+       LICENCIA <input type="checkbox"> </label>
+       </TD>
+                  
+       <TD colspan="7">
+      REVALORIZACION<input type="checkbox"><BR>
+      RECLASIFICACION<input type="checkbox"><BR>
+      UBICACION<input type="checkbox"><BR>
+      REINTEGRO<input type="checkbox"><BR>
+      RESTITUCION<input type="checkbox"><BR>
+      RENUNCIA <input type="checkbox">
+            </TD>
+                  
+      <TD colspan="3">
+      SUPRESION <input type="checkbox"><BR>
+      DESTITUCION<input type="checkbox"><BR>
+      REMOCION<input type="checkbox"><BR>
+      JUBILACON<input type="checkbox"><BR>
+      OTRO _________<BR>
+                 
+            </TD>
+              </tr>
+             
+              <tr>
+                 <tD colspan="5">SITUACION ACTUAL<BR> PROCESO: DATOS DE LA BD</td>
+                 <tD  colspan="7"> SITUACION PROPUESTA <BR> PROCESO: </td>
+            </tr>
+             
+       <tr>
+       <tD colspan="5">SUBPROCESO: DATOS DE LA BD</td>
+       <tD  colspan="7"> SUBPROCESO: </td>
+       </tr>
+             
+       <tr>
+       <tD colspan="5">PUESTO: DATOS DE LA BD</td>
+       <tD  colspan="7">PUESTO: </td>
+       </tr>      
+        
+       <tr>
+       <tD colspan="5">LUGAR DE TRABAJO: DATOS DE LA BD</td>
+       <tD  colspan="7">LUGAR DE TRABAJO: </td>
+       </tr>
+             
+       <tr>
+       <tD colspan="5">REMUNERACION: DATOS DE LA BD</td>
+       <tD  colspan="7">REMUNERACION:</td>
+       </tr>    
+        
+       <tr>
+       <tD colspan="5">PARTIDA PRESUPUESTARIA: <BR> DATOS DE LA BD</td>
+       <tD  colspan="7">PARTIDA PRESUPUESTARIA: <BR> </td>
+       </tr>   
+        
+       <tr>
+       <tD style="text-align:center" colspan="5">ACTA FINAL DEL CONCURSO<BR><BR>
+       No. _________  Fecha: _________</td>
+       <tD style="text-align:center" colspan="7">PROCESO DE TALENTO HUMANO <BR><BR> f. __________________________<br> ESPACIO PARA PODER ESCRIBIR<BR>UNIDAD DE TALENTO HUMANO</td>
+       </tr>     
+        
+        <TR>
+        <tD style="text-align:center" colspan="12">DIOS, PATRIA Y LIBERTAD <BR><BR> f. __________________________<br> ESPACIO PARA PODER ESCRIBIR</td>
+       </tr>  
+        
+        <TR>
+        <tD style="text-align:center" colspan="12">AUTORIDAD NOMINADORA
+       </tr>
+        
+        <tr>
+       <tD style="text-align:center" colspan="4">TALENTO HUMANO<BR><BR>
+       No. MISMO CODIGO SECUENCIAL DE ARRIBA  Fecha: MISMA FECHA QUE ARRIBA</td>
+       <tD style="text-align:center" colspan="4"><BR><BR><BR> f. ___________________<br><BR>RESPONSABLE DEL REGISTRO</td>
+       <tD style="text-align:center" colspan="4"><BR><BR><BR> f. ___________________<br><BR>SERVIDOR</td>
+                    
+       
+         </table><BR>
+         <button type="submit" class="btn btn-primary">IMPRIMIR</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+
+  </html>           

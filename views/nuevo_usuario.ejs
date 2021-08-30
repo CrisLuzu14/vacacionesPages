@@ -1,0 +1,224 @@
+    <!DOCTYPE html>
+    <!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="UTF-8">
+        <title> Responsive Sidebar Menu  | CodingLab </title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </head>
+
+       <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+        *{margin:0;padding:0;}
+
+
+    .button{
+        width:400px;
+        background:#3399cc;
+        display:block;
+        margin:0 auto;
+        margin-top:1%;
+        padding:10px;
+        text-align:center;
+        text-decoration:none;
+        color:#fff;
+        cursor:pointer;
+        transition:background .3s;
+        -webkit-transition:background .3s;
+}
+
+.button:hover{
+  background:#2288bb;
+}
+
+#login{
+  width:400px;
+  margin:0 auto;
+  margin-top:8px;
+  margin-bottom:2%;
+  transition:opacity 1s;
+  -webkit-transition:opacity 1s;
+}
+
+#login h1{
+  background:#3399cc;
+  padding:20px 0;
+  font-size:140%;
+  font-weight:300;
+  text-align:center;
+  color:#fff;
+}
+
+form{
+  background:#f0f0f0;
+  padding:6% 4%;
+}
+
+input[type="box"]{
+  width:92%;
+  background:#fff;
+  margin-bottom:4%;
+  border:1px solid #ccc;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:95%;
+  color:#000;
+}
+
+input[type="submit"]{
+  width:100%;
+  background:#3399cc;
+  border:1;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+input[type="submit"]:hover{
+  background:#2288bb;
+}
+
+    .center {
+      text-align: center;
+    }
+
+    body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+.row .row {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+    
+  </style>
+
+
+    <body>
+      <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">CodingLab</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Search...">
+             <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="/listado.ejs">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Lista de Empleados</span>
+            </a>
+             <span class="tooltip">Lista de Empleados</span>
+          </li>
+          <li>
+           <a href="/nuevo_usuario.ejs">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">Usuarios</span>
+           </a>
+           <span class="tooltip">Usuarios</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Solicitudes</span>
+           </a>
+           <span class="tooltip">Solicitudes</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-pie-chart-alt-2' ></i>
+             <span class="links_name">Analytics</span>
+           </a>
+           <span class="tooltip">Analytics</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-folder' ></i>
+             <span class="links_name">File Manager</span>
+           </a>
+           <span class="tooltip">Files</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cart-alt' ></i>
+             <span class="links_name">Order</span>
+           </a>
+           <span class="tooltip">Order</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-heart' ></i>
+             <span class="links_name">Saved</span>
+           </a>
+           <span class="tooltip">Saved</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Setting</span>
+           </a>
+           <span class="tooltip">Setting</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="profile.jpg" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">Prem Shahi</div>
+                 <div class="job">Web designer</div>
+               </div>
+             </div>
+             <i class='bx bx-log-out' id="log_out" ></i>
+         </li>
+        </ul>
+      </div>
+      <section class="home-section">
+        <div id="login"><br><br>
+          <h1>Formulario de Registro</h1>
+          <form>
+            <input type="box" placeholder="Ingresar Cedula de Identidad" />
+            <input type="box" placeholder="Ingresar sus Nombres" />
+            <input type="box" placeholder="Ingresar sus Apellidos" />
+            <input type="box" placeholder="Ingresar su Correo Electronico" />
+          </form>
+        </div>
+      </section>
+    
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    </body>
+    </html>
+    
+
+
+

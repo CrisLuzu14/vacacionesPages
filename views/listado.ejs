@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   <style>
+    /* CSS DE TABLA */
+    @import url(https://fonts.googleapis.com/css?family=Oxygen);
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
+    
+    /* html {
+      position: relative;
+      padding: 0;
+      min-height: 100%;
+    } */
+/*     
+    body {
+      background: #272b30;
+      background-image: radial-gradient(top, circle cover, #3c3b52 0%, #272b30 80%);
+      position: relative;
+      min-height: 100%;
+      height: 100%;
+      font-family: 'Oxygen', sans-serif;
+      font-size:1.1em;
+      letter-spacing:1.2px;
+    } */
+
+    h2{
+      margin:5% 0;
+      text-align:center;
+      color: #000000;
+    }
+/*     #main {
+      margin: 20px auto;
+      max-width: 960px;
+      border-collapse: collapse;
+      border-spacing: 0px;
+      border:#272b30;
+    } */
+    
+/*     table td {
+      padding: 1em;
+    }
+     */
+
+     table thead {
+        position: sticky;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+    }
+     */
+
+    tbody tr {
+      background: #D3D2DA;
+    }
+    
+    tbody tr:nth-child(odd) {
+      background: #F5F4F4;
+    }
+    
+    
+    
+    .animate-repeat.ng-move,
+    .animate-repeat.ng-enter,
+    .animate-repeat.ng-leave {
+      -webkit-transition: all linear 0.5s;
+      transition: all linear 0.5s;
+    }
+    
+    .animate-repeat.ng-leave.ng-leave-active,
+    .animate-repeat.ng-move,
+    .animate-repeat.ng-enter {
+      opacity: 0;
+      max-height: 0;
+    }
+    
+    .animate-repeat.ng-leave,
+    .animate-repeat.ng-move.ng-move-active,
+    .animate-repeat.ng-enter.ng-enter-active {
+      opacity: 1;
+      max-height: 40px;
+    }
+    #rem{
+      text-align:center;
+    }
+    input[type='button'] {
+      background: #e9e8ec;
+      width: 8em;
+      padding: .4em;
+      font-size: 1em;
+      border-radius: 2%;
+      border: 1px solid #323C50;
+      color: #272b30;
+      transition: all 0.6s ease 0s;
+      transition-duration: 0.3s;
+    }
+    
+    input[type='button']:hover {
+      background: #FFF;
+      box-shadow: inset 0 0 0 1px #6A5A5B;
+      color: #6A5A5B;
+    }
+    
+    input[type='text'], input[type='tel'] {
+      border: 1px solid white;
+      box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.1), 0 0 16px hsla(0, 0%, 0%, 0.1);
+      padding: .3em;
+      background: hsla(255, 255%, 255%, 0.5);
+    }
+    
+    #search input {
+      width: 15em;
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAEgAAABIAEbJaz4AAAAJdnBBZwAAABAAAAAQAFzGrcMAAADcSURBVCjPhdG9TgJhEIXh58M1EGEFjEohiUGk4f4vBaSy0UYRBFEIP8JaLEvWhOjbTc6bzMlMSPxNRICGpopgZejJJosTIRGCtjtLE1uxmrGeZSZEaGh5NzBH5Na9jp7ksMKNtQcL8O1R2bXYLBUKqBjv45QXJ86yoYBg96v4zr55JqzECjmhamedF4ZqWoe4runTJHcHzy60lb3aqmo6tVHJSoZEoKTjSoSdL5GShZ5ZdqhUPVcWrEzVdRXN9X3khTyXuooW+sm04BgjAyux+7TkMd4kWkaE/979AxXnQ1s0DN1UAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDEwLTAyLTExVDExOjUwOjA4LTA2OjAw1hBl+wAAACV0RVh0ZGF0ZTptb2RpZnkAMjAwNi0wNS0wNVQxMzoyMjo0MC0wNTowML/k/hoAAAAASUVORK5CYII=) no-repeat 10px center #fff;
+      transition: all .3s ease-in-out;
+      padding: 5px 10px 5px 30px;
+    }
+    
+    #search input:active,
+    #search input:focus {
+      background-position: 95% center;
+      padding-left: 10px;
+      padding-right: 30px
+    }
+    
+    .addItems {
+      z-index: 1;
+      position: fixed;
+      background-color: hsla(0, 0%, 0%, 0.6);
+      min-width: 100%;
+      width: 100%;
+      min-height: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display:none;
+    }
+    #addData{
+      margin:5% auto;
+    }
+    .addItems > #addData > tbody > tr > td > label{
+         font-weight:bold;
+    }
+    p, ul{
+      color: #D6D7E3;
+      list-style-type: circle;
+      margin-left:5%;
+    }
+    @media screen and (max-width: 820px) {
+      .resp-table > #main {
+        margin-bottom: 0;
+        background: #3D4C60;
+        background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+      }
+      .resp-table > #main > thead > #labels,
+      .resp-table > #main > tfoot {
+        display: none;
+      }
+      .resp-table > #main > thead >.act {
+        display: inline-block;
+      }
+      .resp-table > #main > tbody {
+        display: block;
+      }
+      .resp-table > #main > tbody > tr {
+        display: block;
+        border: 1px solid #3D4C60;
+        border-radius: 2px;
+      }
+      .resp-table > #main > tbody > tr > td {
+        display: block;
+        overflow: hidden;
+        text-align: right;
+      }
+      .resp-table > #main > tbody > tr > td[data-title]:before {
+        content: attr(data-title);
+        font-weight: bold;
+        float: left;
+        font-size: inherit;
+        color: #757575;
+        
+      }
+      
+      .addItems > #addData > tbody > tr > td {
+        background-color:#F5F4F4;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        padding:.2em 5em .2em 5em;
+      }
+    }
+    
+    
+    .fullHeight {
+     
+     position: absolute;
+     top: 0;
+     bottom: 0;
+    
+    }
+    
+    </style>
+   
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Talento Humano</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="/listado.ejs">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Lista de Empleados</span>
+        </a>
+         <span class="tooltip">Lista de Empleados</span>
+      </li>
+      <li>
+       <a href="/nuevo_usuario.ejs">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Usuarios</span>
+       </a>
+       <span class="tooltip">Usuarios</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Solicitudes</span>
+       </a>
+       <span class="tooltip">Solicitudes</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">File Manager</span>
+       </a>
+       <span class="tooltip">Files</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Order</span>
+       </a>
+       <span class="tooltip">Order</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Saved</span>
+       </a>
+       <span class="tooltip">Saved</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  
+  <section class="home-section">
+    <h2>Listado de empleados del ABG</h2>
+    <div ng-app="ngAnimate"  >
+      <div ng-controller="dataTable">
+        <div class='addItems'>
+          <table id='addData'>
+            <thead>
+              <tr>
+                <td colspan='4'>
+                  Add New Contact
+                </td>
+                <tr>
+            </thead>
+            <tr>
+              <td colspan="1">
+                <label>ID:</label>
+              </td>
+              <td colspan="1">
+                <input type="text" ng-model="item.id" />
+              </td>
+              <td colspan="1">
+                <label>Nombres:
+                  <label>
+              </td>
+              <td colspan="1">
+                <input type="text" ng-model="item.name" />
+              </td>
+              <tr>
+                <td colspan="1">
+                  <label>Apellidos:</label>
+                </td>
+                <td colspan="1">
+                  <input type="text" ng-model="item.city" />
+                </td>
+                <td colspan="1">
+                  <label>Cedula:</label>
+                </td>
+                <td colspan="1">
+                  <input type='text' ng-model="item.state" />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="1">
+                  <label>Correo:</label>
+                </td>
+                <td colspan="1">
+                  <label>Proceso:
+                    <label>
+                </td>
+                <td colspan="1">
+                  <input type="text" ng-model="item.name" />
+                </td>
+                <tr>
+                  <td colspan="1">
+                    <label>Subproceso:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type="text" ng-model="item.city" />
+                  </td>
+                  <td colspan="1">
+                    <label>Puesto:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type='text' ng-model="item.state" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">
+                    <label>Lugar de Trabajo:</label>
+                  </td>
+                  <td colspan="1">
+                    <label>Remuneraciòn Mensual:</label>
+                  </td>
+                <td colspan="2">
+                  <input type="tel" ng-model="item.phone" />
+                </td>
+                <td colspan="1"></td>
+              </tr>
+              <tr>
+                <td colspan="1"></td>
+                <td colspan="1">
+                  <input type="Button" class='add' value="Add" ng-click="addItem(item)" />
+                </td>
+                <td colspan="1"></td>
+                <td colspan="1">
+                  <input type="button" class='close' value="Done" />
+                </td>
+              </tr>
+          </table>
+        </div>
+        <div class="resp-table">
+          <table id='main' class="animate-container" border="1">
+            <thead>
+              <tr class='act'>
+                <td colspan="14" id='search'>
+                  <input type='text' id='search' placeholder="Buscar" ng-model="searchItems">
+                </td>
+  
+  
+                <td colspan="11" class='add'>
+                  <input type="button" class='insert' value="Nuevo Registro" />
+                </td>
+              </tr>
+              <tr class="animate-repeat" id='labels'>
+                <td colspan='1'>ID</td>
+                <td colspan='4'>Nombres</td>
+                <td colspan='3'>Apellidos</td>
+                <td colspan='2'>Cedula</td>
+                <td colspan='3'>Correo</td>
+                <td colspan='1'>Proceso</td>
+                <td colspan='4'>Subproceso</td>
+                <td colspan='4'>Puesto</td>
+                <td colspan='1'>Lugar de Trabajo</td>
+                <td colspan='1'>Remuneraciòn Mensual</td>
+                <td colspan='1'>Remove Item</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="animate-repeat" ng-repeat="item in items | filter:searchItems">
+                <td data-title="ID:" colspan='1'>{{item.id}}</td>
+                <td data-title="Nombres:" colspan='4'>{{item.name}}</td>
+                <td data-title="Apellidos:" colspan='3'>{{item.city}}</td>
+                <td data-title="Cedula:" colspan='2'>{{item.state}}</td>
+                <td data-title="Correo:" colspan='3'>{{item.phone}}</td>
+                <td data-title="Proceso:" colspan='1'>{{item.name}}</td>
+                <td data-title="Subproceso:" colspan='4'>{{item.city}}</td>
+                <td data-title="Puesto:" colspan='4'>{{item.state}}</td>
+                <td data-title="Lugar de Trabajo:" colspan='1'>{{item.phone}}</td>
+                <td data-title="Remuneraciòn Mensual:" colspan='1'>{{item.phone}}</td>
+                <td data-title="" colspan='1' id = 'rem'>
+                  <input type="button" value="Delete" ng-click="removeItem($index)" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <br />
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

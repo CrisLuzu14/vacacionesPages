@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+
+  <style>
+    .center {
+      text-align: center;
+    }
+
+    body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+.row .row {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(155,155,155,.1);
+  border: 1px solid rgba(155,155,155,.1);
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+    
+  </style>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Talento Humano</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="listado.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Lista de Empleados</span>
+        </a>
+         <span class="tooltip">Lista de Empleados</span>
+      </li>
+      <li>
+       <a href="nuevo_usuario.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Usuarios</span>
+       </a>
+       <span class="tooltip">Usuarios</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Solicitudes</span>
+       </a>
+       <span class="tooltip">Solicitudes</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">File Manager</span>
+       </a>
+       <span class="tooltip">Files</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Order</span>
+       </a>
+       <span class="tooltip">Order</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Saved</span>
+       </a>
+       <span class="tooltip">Saved</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <table >
+    <div class="container">
+    <form>
+      <h2 align="center">Formulario de Ingreso</h2>
+      <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <td colspan="7"> <img src="abg.png" width="500" height="130"></td>
+        </div>  
+          <div class="col-md-5">  
+          <td  colspan="35" > <p align="center">ACCION DE PERSONAL</p><p>No.</p><p>ABG-UAH-ACP-2021-	numero secuencial</p>
+        <p align="center">fecha automatico</p></td>
+        </div>
+    </div>
+
+      
+      <div class="row">
+              <div class="col-md-4">DECRETO&nbsp;<input type="checkbox" ></div>
+              <div class="col-md-4">ACUERDO&nbsp;<input type="checkbox" ></div>
+              <div class="col-md-4">RESOLUCION&nbsp;<input type="checkbox" ></div>
+      </div>
+       
+
+      <div class="row">
+          <div class="col-md-6">No.</div>
+          <div class="col-md-6">FECHA</div>
+      </div>
+      
+      <div class="row" >
+        <div class="col-md-12" >
+          <p align="center">NOMBRE DE LA PERSONA DE LA BASE DE DATOS</p>
+          <div class="row">
+            <div class="col-md-6">APELLIDOS</div>
+            <div class="col-md-6">NOMBRES</div>
+      </div>
+
+     <div class="row" >
+            <div class="col-md-4">No. de Cédula de Ciudadania</div>
+            <div class="col-md-4">Desde</div>
+            <div class="col-md-4">Hasta</div>
+          <div class="row">
+            <div class="col-md-4">BASE DE DATOS</div>
+            <div class="col-md-4"><input type="date" id="calendar" name="calendar"></div>
+            <div class="col-md-4"><input type="date" id="calendar2" name="calendar2"></div>
+      </div></div>
+
+      
+      <div class="col-md-12" >
+          EXPLICACIÓN:(Opcional: adjuntar Anexo)
+          <div class="row">
+            <div class="col-md-12">La Directora Ejecutiva de la ABG en uso de sus facultades y de conformidad con el Art. <input type="text"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' style="width : 20px" id="art" name="art"> de la Ley Organica del Servicio Publico, y en concordancia con el Art. 28 del Reglamento a la LOSEP, se concede <input type="text" style="width : 250px" id="vca" name="vca">, segun Memorando Nro. <input type="text" style="width : 200px" id="memo" name="memo"> de fecha <input type="text" id="funitalento" name="funitalento">. </p></td>
+            </div>
+      </div></div>
+
+      <div class="row" >
+        <div class="row" >
+            <div class="col-md-3">INGRESO <input type="checkbox"></div>
+            <div class="col-md-3">TRASLADO <input type="checkbox"></div>
+            <div class="col-md-3">REVOLARIZACION <input type="checkbox"></div>
+            <div class="col-md-3">SUPRESION <input type="checkbox"></div><br>
+            <div class="col-md-3">NOMBRAMIENTO <input type="checkbox"></div>
+            <div class="col-md-3">TRASPASO <input type="checkbox"></div>
+            <div class="col-md-3">RECLASIFICACION <input type="checkbox"></div>
+            <div class="col-md-3">UBICACION <input type="checkbox"></div><br>
+            <div class="col-md-3">REMOCION <input type="checkbox"></div>
+            <div class="col-md-3">SUBROGACION <input type="checkbox"></div>
+            <div class="col-md-3">INTERCAMBIO <input type="checkbox"></div>
+            <div class="col-md-3">REINTEGRO <input type="checkbox"></div><br>
+            <div class="col-md-3">JUBILACION <input type="checkbox"></div>
+            <div class="col-md-3">ENCARGO <input type="checkbox"></div>
+            <div class="col-md-3">COMISION DE SERVICIOS <input type="checkbox"></div>
+            <div class="col-md-3">RESTITUCION <input type="checkbox"></div><br>
+            <div class="col-md-3">OTRO <input type="checkbox"></div>
+            <div class="col-md-3">VACACIONES <input type="checkbox"></div>
+            <div class="col-md-3">LICENCIA <input type="checkbox"></div>
+            <div class="col-md-3">RENUNCIA <input type="checkbox"></div>
+        </div></div>
+
+        <div class="row">
+              <div class="col-md-6"> <div class="center">SITUACION ACTUAL
+              <div class="row">
+                <div class="col-md-12">PROCESO:  DATOS SACADOS DE LA BASE DE DATOS </div>
+              </div></div></div>
+              <div class="col-md-6"> <div class="center">SITUACION PROPUESTA
+                <div class="row">
+                  <div class="col-md-12">PROCESO:  DATOS SACADOS DE LA BASE DE DATOS </div></div>
+        </div></div></div></div>
+
+        <div class="row">
+          <div class="col-md-6">
+            SUBPROCESO:  DATOS SACADOS DE LA BASE DE DATOS </td>
+          </div>  
+            <div class="col-md-6"> SUBPROCESO:
+          </div></div>
+
+        <div class="row">
+            <div class="col-md-6">
+              PUESTO:  DATOS SACADOS DE LA BASE DE DATOS </td>
+            </div>  
+              <div class="col-md-6"> PUESTO:
+        </div></div>
+
+        <div class="row">
+              <div class="col-md-6">
+                LUGAR DE TRABAJO:  DATOS SACADOS DE LA BASE DE DATOS </td>
+              </div>  
+                <div class="col-md-6"> LUGAR DE TRABAJO:
+        </div></div>
+
+        <div class="row">
+          <div class="col-md-6"> REMUNERACIÓN MENSUAL:  DATOS SACADOS DE LA BASE DE DATOS </td>
+          </div>  
+            <div class="col-md-6"> REMUNERACIÓN MENSUAL: 
+          </div></div>
+
+          <div class="row">
+            <div class="col-md-6"> PARTIDA PRESUPUESTARIA: DATOS SACADOS DE LA BD </td>
+            </div>  
+              <div class="col-md-6"> PARTIDA PRESUPUESTARIA: 
+            </div></div>
+ 
+      <div class="row">
+        <div class="col-md-6">
+          <p class="center">ACTA FINAL DEL CONCURSO</p>
+          <div class="row">
+            <div class="col-md-6">No.</div>
+            <div class="col-md-6">Fecha:</div>
+          </div>
+        </div>
+        <div class="col-md-6"><p class="center">PROCESO DE TALENTO HUMANO</p>
+            <div class="row">
+            <div class="col-md-6">No.</div>
+            <div class="col-md-6">Fecha:</div>
+          </div>
+        </div>
+</div></div>
+
+<div class="row" >
+  <div class="col-md-12" >
+    <p align="center">DIOS, PATRIA Y LIBERTAD</p> 
+    <div class="row" >
+      <div class="col-md-12" >
+        <p align="center">f.______________________________</p>
+        <div class="col-md-12" >
+          <p align="center"><input type="text" id="fautoridad" name="fautoridad"></p>
+</div></div>
+
+    <div class="row" >
+      <div class="col-md-12" >
+        <p align="center">AUTORIDAD NOMINADORA</p>
+    </div></div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <br><p class="center">TALENTO HUMANO</p>
+        <div class="row">
+          <div class="col-md-6">No.</div>
+          <div class="col-md-6">Fecha:</div>
+        </div>
+      </div>
+
+      <div class="col-md-4"><p class="center"><br></p>
+      <div class="row">
+          <div class="col-md-12"><p align="center">f. ___________________</p></div>
+          <div class="col-md-12"><p align="center">Responsable del Registro</p></div>
+        </div>
+      </div>
+
+      <div class="col-md-4"><p class="center"><br></p>
+      <div class="row">
+          <div class="col-md-12"><p align="center">f. ___________________</p></div>
+          <div class="col-md-12"><p align="center">Servidor</p></div>
+        </div>
+      </div>
+</div></div></div>
+
+<div class="row" >
+  <div class="col-md-12" >
+    <p align="center">Fecha de creacion de formato: 2014-05-27  /  Revision:00  /  Pagina 1 de 2</p>
+</div></div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+
+  </html>
