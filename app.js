@@ -11,7 +11,7 @@ const mongoose = require('mongoose')
 const app =express();//llamas al metodo express
 
 //connection DataBase MongoDB
-const mongooseUrl='mongodb+srv://TalentHuman:TalentHuman@vacaciones.qspdv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const mongooseUrl='mongodb+srv://TalentHuman:TalentHuman@vacaciones.qspdv.mongodb.net/vacacionesTalentHuman?retryWrites=true&w=majority'
 mongoose.connect(mongooseUrl,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
@@ -28,7 +28,7 @@ app.use(express.urlencoded({extended:true})) //sirve para poder tomar los argume
 app.use(amdinRoute)
 app.use(empleadosRoute)
 app.use(solicitudRoute)
-
+app.use(express.static(__dirname+'/public'))//para poder usar los recursos como img js css
 //PAGE NOT FOUND
 app.use((req,res,next)=>{
     res.status(400).render('404')
