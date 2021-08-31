@@ -22,5 +22,13 @@ router.get('/empleados2',async(req,res,next)=>{
     console.log(usu)
                 res.render('menu',{'usu':usu})   
 } )
+router.get('/gestion-empleado',(req,res,next)=>{
+    res.render('formEmpleado',)   
+} )
+router.get('/gestion-empleado/:id',async(req,res,next)=>{
+    const id =req.params.id
+    console.log(id)
+                res.render('formEmpleado',{'id':id})   
+} )
  
 module.exports=router

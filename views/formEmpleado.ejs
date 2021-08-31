@@ -46,51 +46,9 @@
   <section class="home-section">
     
       <div class="titlePage">
-        <h1>Gestión Empleados</h1>
-      </div>    
-      <div class="grid">
-        <div class="buscador">
-          <input type="text" placeholder="busqueda">
-        </div>
-        <div class="btnAdd">
-          <a href="http://localhost:3000/gestion-empleado/">Nuevo Registro</a>
-        </div>
-      </div>
-      <div class="table">
-        <table>
-          <tr>
-            <th>Editar</th>
-            <th>Nombres</th>
-            <th>Apellidos</th>
-            <th>Cédula</th>
-            <th>Correo</th>
-            <th>Proceso</th>
-            <th>Subproceso</th>
-            <th>Puesto</th>
-            <th>Lugar de Trabajo</th>
-            <th>Remuneración</th>
-            <th>Estado</th> 
-            <th>Solicitud</th>
-           </tr>
-          <% for(var i=0;i < usu.length ;i++){ %>
-            <tr>
-              <td><a href="http://localhost:3000/gestion-empleado/<%=usu[i]._id%>">ver solicitud</a></td>
-              <td ><%=usu[i].nombres%></td>
-              <td ><%=usu[i].apellidos%></td>
-              <td ><%=usu[i].cedula%></td>
-              <td ><%=usu[i].correo%></td>
-              <td ><%=usu[i].proceso%></td>
-              <td ><%=usu[i].subproceso%></td>
-              <td ><%=usu[i].puesto%></td>
-              <td ><%=usu[i].lugarTrabajo%></td>
-              <td ><%=usu[i].remuneracionM%></td>
-              <td ><%=usu[i].estado%></td>
-              <td ><a href="http://localhost:3000/solicitud_vacaciones/<%=usu[i].idSolicitud%>">ver solicitud</a></td>
-            </tr>
-            <% }%>
-        </table>
-      </div>
-    
+        <h1><% if(typeof id === 'undefined') {%>Agregar Empleado<%}else{%>Editar Empleado<%}%></h1>
+      </div>  
+      
     
   </section>
 
