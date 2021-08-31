@@ -10,16 +10,14 @@ router.post('/empleados',async (req,res,next)=>{//el métod use recibe 3 paramat
     //res.sendFile(path.join(__dirname,'../','views','add-product.html')) 
    
     console.log(req.body.user)
-    
-                const usu =await Usuarios.find()
-                
-                res.render('menu',{'usu':usu})
-             
-   
+
+        const usu =await Usuarios.find()
+        res.render('menu',{'usu':usu})
+
 } )
 router.get('/empleados2',async(req,res,next)=>{
     const usu =await Usuarios.find()
-    console.log(usu)
+    //console.log(usu)
                 res.render('menu',{'usu':usu})   
 } )
 router.get('/gestion-empleado',(req,res,next)=>{
@@ -27,8 +25,15 @@ router.get('/gestion-empleado',(req,res,next)=>{
 } )
 router.get('/gestion-empleado/:id',async(req,res,next)=>{
     const id =req.params.id
-    console.log(id)
-                res.render('formEmpleado',{'id':id})   
+    
+    const usu =await Usuarios.find({_id:id})
+    console.log(usu)
+                res.render('formEmpleado',{'usu':usu})   
 } )
- 
+router.get('/gestion-empleado/consulta/:dato',async(req,res,next)=>{
+    const dato =req.params.dato
+    const usu =await Usuarios.find({cedula:dato})
+ console.log(usu);
+                res.send(usu)   
+} )
 module.exports=router

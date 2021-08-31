@@ -59,7 +59,7 @@
           <a title="Agregar nuevo empledo" href="http://localhost:3000/gestion-empleado/"><i class='bx bxs-user-plus' ></i></a>
         </div>
         <div class="buscador">
-          <input type="text" placeholder="busqueda">
+          <input id="InpBuscar" type="text" placeholder="busqueda">
         </div>
       </div>
       <div class="table">
@@ -77,23 +77,26 @@
             <th>Remuneración</th>
             <th>Estado</th> 
            </tr>
-          <% for(var i=0;i < usu.length ;i++){ %>
-            <tr>
-              <td class="acciones"><a title="Editar Empleado" href="http://localhost:3000/gestion-empleado/<%=usu[i]._id%>"><i class='bx bx-edit'></i></a>
-                <a title="Solicitud Vacaciones" href="http://localhost:3000/solicitud_vacaciones/<%=usu[i].idSolicitud%>"><i class='bx bxs-file-doc' ></i></a>
-              </td>
-              <td ><%=usu[i].nombres%></td>
-              <td ><%=usu[i].apellidos%></td>
-              <td ><%=usu[i].cedula%></td>
-              <td ><%=usu[i].correo%></td>
-              <td ><%=usu[i].proceso%></td>
-              <td ><%=usu[i].subproceso%></td>
-              <td ><%=usu[i].puesto%></td>
-              <td ><%=usu[i].lugarTrabajo%></td>
-              <td ><%=usu[i].remuneracionM%></td>
-              <td style="text-align: center;"><%if(usu[i].estado=='1'){%><i title="Empleado Activo" class='cGreen bx bx-checkbox-checked' ></i><%}else{%><i title="Empleado Inactivo"  class='cRed bx bx-x-circle' ></i><%}%></td>
-            </tr>
-            <% }%>
+           <tbody id="tbody">
+            <% for(var i=0;i < usu.length ;i++){ %>
+              <tr>
+                <td class="acciones"><a title="Editar Empleado" href="http://localhost:3000/gestion-empleado/<%=usu[i]._id%>"><i class='bx bx-edit'></i></a>
+                  <a title="Solicitud Vacaciones" href="http://localhost:3000/solicitud_vacaciones/<%=usu[i].idSolicitud%>"><i class='bx bxs-file-doc' ></i></a>
+                </td>
+                <td ><%=usu[i].nombres%></td>
+                <td ><%=usu[i].apellidos%></td>
+                <td ><%=usu[i].cedula%></td>
+                <td ><%=usu[i].correo%></td>
+                <td ><%=usu[i].proceso%></td>
+                <td ><%=usu[i].subproceso%></td>
+                <td ><%=usu[i].puesto%></td>
+                <td ><%=usu[i].lugarTrabajo%></td>
+                <td ><%=usu[i].remuneracionM%></td>
+                <td style="text-align: center;"><%if(usu[i].estado=='1'){%><i title="Empleado Activo" class='cGreen bx bx-checkbox-checked' ></i><%}else{%><i title="Empleado Inactivo"  class='cRed bx bx-x-circle' ></i><%}%></td>
+              </tr>
+              <% }%>
+           </tbody>
+         
         </table>
       </div>
     
@@ -101,11 +104,14 @@
   </section>
 
   <script  src="/js/estilos.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
     $( function() {
       $( document ).tooltip();
     } );
+    
     </script>
   </body>
   </html>
