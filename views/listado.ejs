@@ -213,7 +213,8 @@
      bottom: 0;
     
     }
-    
+
+ 
     </style>
    
 <body>
@@ -230,14 +231,14 @@
          <span class="tooltip">Search</span>
       </li>
       <li>
-        <a href="/listado.ejs">
+        <a href="listado.html">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Lista de Empleados</span>
         </a>
          <span class="tooltip">Lista de Empleados</span>
       </li>
       <li>
-       <a href="/nuevo_usuario.ejs">
+       <a href="nuevo_usuario.html">
          <i class='bx bx-user' ></i>
          <span class="links_name">Usuarios</span>
        </a>
@@ -318,70 +319,136 @@
               <td colspan="1">
                 <input type="text" ng-model="item.id" />
               </td>
+            </tr>
+            <tr>
               <td colspan="1">
-                <label>Nombres:
+                <label>Partida:
                   <label>
               </td>
               <td colspan="1">
-                <input type="text" ng-model="item.name" />
+                <input type="text" ng-model="item.partida" />
               </td>
-              <tr>
-                <td colspan="1">
-                  <label>Apellidos:</label>
-                </td>
-                <td colspan="1">
-                  <input type="text" ng-model="item.city" />
-                </td>
-                <td colspan="1">
-                  <label>Cedula:</label>
-                </td>
-                <td colspan="1">
-                  <input type='text' ng-model="item.state" />
-                </td>
               </tr>
               <tr>
+              <td colspan="1">
+                <label>Cedula:</label>
+              </td>
+              <td colspan="1">
+                <input type='text' ng-model="item.cedula" />
+              </td>
+              </tr>
+              <tr>
+              <td colspan="1">
+                <label>Apellidos:
+                  <label>
+              </td>
+              <td colspan="1">
+                <input type="text" ng-model="item.apellidos" />
+              </td>
+              </tr>
+                <tr>
                 <td colspan="1">
-                  <label>Correo:</label>
+                  <label>Nombres:</label>
                 </td>
                 <td colspan="1">
-                  <label>Proceso:
+                  <input type="text" ng-model="item.nombres" />
+                </td>
+                </tr>
+                <tr>
+                <td colspan="1">
+                  <label>F.I.G:
                     <label>
                 </td>
                 <td colspan="1">
-                  <input type="text" ng-model="item.name" />
+                  <input type="text" ng-model="item.fig" />
                 </td>
+              </tr>
+                <tr>
+                <td colspan="1">
+                  <label>Modalidad:
+                    <label>
+                </td>
+                <td colspan="1">
+                  <input type="text" ng-model="item.modalidad" />
+                </td>
+                <tr>
+                  <td colspan="1">
+                    <label>Lugar:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type="text" ng-model="item.lugar" />
+                  </td>
+              </tr>
+                <tr>
+                  <td colspan="1">
+                    <label>Denominación_del_puesto:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type='text' ng-model="item.den_puesto" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">
+                    <label>Vigencia del Nombramiento:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type='text' ng-model="item.vig_nom" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">
+                    <label>Proceso:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type='text' ng-model="item.proceso" />
+                  </td>
+                </tr>
                 <tr>
                   <td colspan="1">
                     <label>Subproceso:</label>
                   </td>
                   <td colspan="1">
-                    <input type="text" ng-model="item.city" />
-                  </td>
-                  <td colspan="1">
-                    <label>Puesto:</label>
-                  </td>
-                  <td colspan="1">
-                    <input type='text' ng-model="item.state" />
+                    <input type='text' ng-model="item.subproceso" />
                   </td>
                 </tr>
                 <tr>
                   <td colspan="1">
-                    <label>Lugar de Trabajo:</label>
+                    <label>Lugar de trabajo:</label>
                   </td>
                   <td colspan="1">
-                    <label>Remuneraciòn Mensual:</label>
+                    <input type='text' ng-model="item.lug_trabajo" />
                   </td>
-                <td colspan="2">
-                  <input type="tel" ng-model="item.phone" />
-                </td>
-                <td colspan="1"></td>
-              </tr>
-              <tr>
-                <td colspan="1"></td>
+                </tr>
+                <tr>
+                  <td colspan="1">
+                    <label>Puesto:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type='text' ng-model="item.puesto" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">
+                    <label>Remuneración Mensual:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type='text' ng-model="item.rmu" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">
+                    <label>Correo electronico:</label>
+                  </td>
+                  <td colspan="1">
+                    <input type='text' ng-model="item.correo" />
+                  </td>
+                </tr>
+                <tr>
                 <td colspan="1">
                   <input type="Button" class='add' value="Add" ng-click="addItem(item)" />
                 </td>
-                <td colspan="1"></td>
+                </tr>
+                <tr>
                 <td colspan="1">
                   <input type="button" class='close' value="Done" />
                 </td>
@@ -397,38 +464,50 @@
                 </td>
   
   
-                <td colspan="11" class='add'>
+                <td colspan="25" class='add'>
                   <input type="button" class='insert' value="Nuevo Registro" />
                 </td>
               </tr>
               <tr class="animate-repeat" id='labels'>
                 <td colspan='1'>ID</td>
-                <td colspan='4'>Nombres</td>
-                <td colspan='3'>Apellidos</td>
-                <td colspan='2'>Cedula</td>
-                <td colspan='3'>Correo</td>
-                <td colspan='1'>Proceso</td>
-                <td colspan='4'>Subproceso</td>
-                <td colspan='4'>Puesto</td>
+                <td colspan='1'>Partida</td>
+                <td colspan='1'>Cedula</td>
+                <td colspan='2'>Apellidos</td>
+                <td colspan='2'>Nombres</td>
+                <td colspan='1'>F.I.G.</td>
+                <td colspan='1'>Modalidad</td>
+                <td colspan='1'>Lugar</td>
+                <td colspan='2'>Denominación del puesto</td>
+                <td colspan='1'>Vigencia del Nombramiento</td>
+                <td colspan='3'>Proceso</td>
+                <td colspan='2'>Subproceso</td>
                 <td colspan='1'>Lugar de Trabajo</td>
+                <td colspan='2'>Puesto</td>
                 <td colspan='1'>Remuneraciòn Mensual</td>
+                <td colspan='2'>Correo</td>
                 <td colspan='1'>Remove Item</td>
               </tr>
             </thead>
             <tbody>
               <tr class="animate-repeat" ng-repeat="item in items | filter:searchItems">
-                <td data-title="ID:" colspan='1'>{{item.id}}</td>
-                <td data-title="Nombres:" colspan='4'>{{item.name}}</td>
-                <td data-title="Apellidos:" colspan='3'>{{item.city}}</td>
-                <td data-title="Cedula:" colspan='2'>{{item.state}}</td>
-                <td data-title="Correo:" colspan='3'>{{item.phone}}</td>
-                <td data-title="Proceso:" colspan='1'>{{item.name}}</td>
-                <td data-title="Subproceso:" colspan='4'>{{item.city}}</td>
-                <td data-title="Puesto:" colspan='4'>{{item.state}}</td>
-                <td data-title="Lugar de Trabajo:" colspan='1'>{{item.phone}}</td>
-                <td data-title="Remuneraciòn Mensual:" colspan='1'>{{item.phone}}</td>
+                <td data-title="ID:" colspan='1'></td>
+                <td data-title="Partida:" colspan='1'>556</td>
+                <td data-title="Cedula:" colspan='1'>0914716782</td>
+                <td data-title="Apellidos:" colspan='2'>ALVARADO PINCAY </td>
+                <td data-title="Nombres:" colspan='2'>JESSICA ISABEL </td>
+                <td data-title="FIG:" colspan='1'>01/09/2018</td>
+                <td data-title="Modalidad:" colspan='1'>Nombramiento</td>
+                <td data-title="Lugar:" colspan='1'>SAN CRISTOBAL</td>
+                <td data-title="Denominación_del_puesto:" colspan='2'>TECNICO DE VIGILANCIA FITOSANITARIA 1</td>
+                <td data-title="Vig_nombramiento:" colspan='1'>01/12/2018</td>
+                <td data-title="Proceso:" colspan='3'>DIRECCION DE VIGILANCIA Y CALIDAD PARA LA BIOSEGURIDAD</td>
+                <td data-title="Subproceso:" colspan='2'>UNIDAD DE VIGILANCIA FITO ZOOSANITARIA</td>
+                <td data-title="Lugar de Trabajo:" colspan='1'>SAN CRISTOBAL</td>
+                <td data-title="Puesto:" colspan='2'>TECNICO DE VIGILANCIA FITOSANITARIA 1</td>
+                <td data-title="Remuneraciòn Mensual:" colspan='1'>1053</td>
+                <td data-title="Correo:" colspan='2'>jessica.alvarado@abgalapagos.gob.ec</td>
                 <td data-title="" colspan='1' id = 'rem'>
-                  <input type="button" value="Delete" ng-click="removeItem($index)" />
+                <input type="button" value="Delete" ng-click="removeItem($index)" />
                 </td>
               </tr>
             </tbody>
