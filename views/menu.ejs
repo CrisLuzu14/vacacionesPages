@@ -8,6 +8,11 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/css/estilos.css">
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+   <style>
+ 
+   </style>
    </head>
 <body>
   <div class="sidebar">
@@ -49,17 +54,18 @@
         <h1>Gestión Empleados</h1>
       </div>    
       <div class="grid">
+        
+        <div class="btnAdd">
+          <a title="Agregar nuevo empledo" href="http://localhost:3000/gestion-empleado/"><i class='bx bxs-user-plus' ></i></a>
+        </div>
         <div class="buscador">
           <input type="text" placeholder="busqueda">
-        </div>
-        <div class="btnAdd">
-          <a href="http://localhost:3000/gestion-empleado/">Nuevo Registro</a>
         </div>
       </div>
       <div class="table">
         <table>
           <tr>
-            <th>Editar</th>
+            <th>Acciones</th>
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Cédula</th>
@@ -70,11 +76,12 @@
             <th>Lugar de Trabajo</th>
             <th>Remuneración</th>
             <th>Estado</th> 
-            <th>Solicitud</th>
            </tr>
           <% for(var i=0;i < usu.length ;i++){ %>
             <tr>
-              <td><a href="http://localhost:3000/gestion-empleado/<%=usu[i]._id%>">ver solicitud</a></td>
+              <td class="acciones"><a title="Editar Empleado" href="http://localhost:3000/gestion-empleado/<%=usu[i]._id%>"><i class='bx bx-edit'></i></a>
+                <a title="Solicitud Vacaciones" href="http://localhost:3000/solicitud_vacaciones/<%=usu[i].idSolicitud%>"><i class='bx bxs-file-doc' ></i></a>
+              </td>
               <td ><%=usu[i].nombres%></td>
               <td ><%=usu[i].apellidos%></td>
               <td ><%=usu[i].cedula%></td>
@@ -84,8 +91,7 @@
               <td ><%=usu[i].puesto%></td>
               <td ><%=usu[i].lugarTrabajo%></td>
               <td ><%=usu[i].remuneracionM%></td>
-              <td ><%=usu[i].estado%></td>
-              <td ><a href="http://localhost:3000/solicitud_vacaciones/<%=usu[i].idSolicitud%>">ver solicitud</a></td>
+              <td style="text-align: center;"><%if(usu[i].estado=='1'){%><i title="Empleado Activo" class='cGreen bx bx-checkbox-checked' ></i><%}else{%><i title="Empleado Inactivo"  class='cRed bx bx-x-circle' ></i><%}%></td>
             </tr>
             <% }%>
         </table>
@@ -95,7 +101,12 @@
   </section>
 
   <script  src="/js/estilos.js"></script>
-       
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( document ).tooltip();
+    } );
+    </script>
   </body>
   </html>
   

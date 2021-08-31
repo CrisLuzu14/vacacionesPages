@@ -7,13 +7,18 @@
          box-sizing: border-box;
          font-family: "Poppins" , sans-serif;
        }
+       :root {
+        --backgroundMenu: #11101D;
+        --boxShadows:2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+      }
+      
        .sidebar{
          position: fixed;
          left: 0;
          top: 0;
          height: 100%;
          width: 78px;
-         background: #11101D;
+         background: var(--backgroundMenu);
          padding: 6px 14px;
          z-index: 99;
          transition: all 0.5s ease;
@@ -132,7 +137,7 @@
        }
        .sidebar .bx-search:hover{
          background: #FFF;
-         color: #11101d;
+         color: var(--backgroundMenu);
        }
        .sidebar li a{
          display: flex;
@@ -142,7 +147,7 @@
          align-items: center;
          text-decoration: none;
          transition: all 0.4s ease;
-         background: #11101D;
+         background: var(--backgroundMenu);
        }
        .sidebar li a:hover{
          background: #FFF;
@@ -163,7 +168,7 @@
        .sidebar li a:hover .links_name,
        .sidebar li a:hover i{
          transition: all 0.5s ease;
-         color: #11101D;
+         color: var(--backgroundMenu);
        }
        .sidebar li i{
          height: 50px;
@@ -239,7 +244,7 @@
        }
        .home-section .text{
          display: inline-block;
-         color: #11101d;
+         color: var(--backgroundMenu);
          font-size: 25px;
          font-weight: 500;
          margin: 18px
@@ -247,43 +252,60 @@
        .container{
          padding: 10px 20px;
        }
+       .cabPage .titlePage{
+         display: grid;
+         grid-template-columns: 62fr 1fr;
+       }
+       
+       .cabPage a{
+         font-size: 35px;
+         color: var(--backgroundMenu);
+         text-align: right;
+         margin-right: 25px;  
+       }
+       .cabPage a:hover{
+         transition: 0.3s;
+        color: red;
+      }
        .titlePage{
          text-align: center;
-         padding: 10px;
+         padding: 15px 15px;
        }
        .grid{
          display: grid;
          grid-template-columns: 1fr 1fr;
-         padding: 20px;
+         padding: 20px 20px 5px 20px;
        }
        .buscador input{
           padding: 5px;
           width: 50%;
           border-radius: 5px;
        }
-       .btnAdd{
-         text-align: right;
-
-       }
+       
        .btnAdd a{ 
          text-decoration: none;
          background: green;
          color: white;
-         border-radius: 5px;
+         border-radius: 50%;
          padding: 5px;
-         box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.3);
-         margin-right: 10px;
+         box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.3); 
+         font-size: 25px;
+         margin-left: 5px;
        }
        .table table{
-         font-size: 10px;
+         font-size: 15px;
          padding: 15px;
          margin: 10px;
          border-spacing: 0px;
        }
        .table th{
          color: white;
-         background: #11101D;
+         background: var(--backgroundMenu);
        }
+       .table tr:hover{
+        color: var(--backgroundMenu);
+        background: white;
+      }
        .table tr,.table th{
        
          border: 1px solid gray;
@@ -299,6 +321,91 @@
          text-align: left;
          text-transform: capitalize;  
       }
+      .table .acciones i{
+        font-size: 17px;
+        margin-left: 3px;
+        color: var(--backgroundMenu);
+      }
+      .table .acciones i:hover{
+        transition: 0.2s;
+        font-size: 19px;
+        margin-left: 3px;
+        color: green;
+      }
+      .table .cGreen{
+        color: green;
+        font-size: 20px;
+      }
+      .table .cRed{
+        font-size: 20px;
+        color: red;
+      }
+      
+      
+      /*formulario agregar usuario*/
+      .gridForm{
+        padding: 20PX;
+        margin: 20px;
+        /*centrar formulario*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .gridForm form{
+        
+        padding: 20px;
+        width: 500px;
+        border: 2px solid var(--backgroundMenu);
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        
+        }
+        .gridForm form .rowform{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          
+        }
+        .gridForm form .rowform .input {
+          padding: 5px;
+          width: 95%;
+          margin: 5 px 0;
+        }
+        .gridForm form .rowform .input input{
+          padding: 5px;
+          width: 95%;
+          margin: 5px 5px 5px 0;
+        }
+        .gridForm form .rowbutton{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          
+        }
+        .gridForm form .rowbutton .btnForm{
+          padding: 8px 0;
+          text-align:center;/*centrar boton*/
+        }
+        .gridForm form .rowbutton .btnForm input{
+          padding: 5px;
+          background: var(--backgroundMenu);
+          color: #ffff;
+          width: 200px;
+          border-radius: 5px;
+          box-shadow: var(--boxShadows);
+          
+
+        }
+        .gridForm form .rowform .selectForm {
+          display: grid;
+          grid-template-columns: 1f;
+          grid-template-rows: 1fr 1f;
+        }
+        .gridForm form .rowform .selectForm select{
+          margin-bottom: 11px;
+        }
        @media (max-width: 420px) {
          .sidebar li .tooltip{
            display: none;

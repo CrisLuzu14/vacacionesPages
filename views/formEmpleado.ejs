@@ -44,10 +44,76 @@
     </ul>
   </div>
   <section class="home-section">
-    
-      <div class="titlePage">
-        <h1><% if(typeof id === 'undefined') {%>Agregar Empleado<%}else{%>Editar Empleado<%}%></h1>
-      </div>  
+    <div class="cabPage">
+        <div class="titlePage">
+            <h1><% if(typeof id === 'undefined') {%>Agregar Empleado<%}else{%>Editar Empleado<%}%></h1>
+            <a title="Volver Gestión Empleaados" href="http://localhost:3000/empleados2"><i class='bx bx-left-arrow-alt' ></i></a>
+          </div>
+        
+       </div>  
+      
+      <div class="gridForm">
+        <form action="/add-empleado" method="POST">
+        <div class="rowform">
+            <div class="input">
+                <label for="nombres">Nombres:</label>
+                <input type="text" placeholder="Ingrese nombres completos" id="nombres" name="nombres">
+            </div>
+            <div class="input">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" placeholder="Ingrese apellidos completos" id="apellidos" name="apellidos">
+            </div>
+        </div>
+        <div class="rowform">
+            <div class="input">
+                <label for="cedula">Cédula:</label>
+                <input type="text" placeholder="Ingrese cedula" id="cedula" name="cedula">
+            </div>
+            <div class="input">
+                <label for="correo">correo:</label>
+                <input type="email" placeholder="Ingrese correo" id="correo" name="correo">
+            </div>
+        </div>
+        <div class="rowform">
+            <div class="input">
+                <label for="proceso">Proceso:</label>
+                <input type="text" placeholder="Ingrese proceso" id="proceso" name="proceso">
+            </div>
+            <div class="input">
+                <label for="subproceso">Subproceso:</label>
+                <input type="text" placeholder="Ingrese subproceso" id="subproceso" name="subproceso">
+            </div>
+        </div>
+        <div class="rowform">
+            <div class="input">
+                <label for="puesto">Puesto:</label>
+                <input type="text" placeholder="Ingrese puesto" id="puesto" name="puesto">
+            </div>
+            <div class="input">
+                <label for="lugar_trabajo">Lugar de Trabajo:</label>
+                <input type="text" placeholder="Ingrese lugar_trabajo" id="lugar_trabajo" name="lugar_trabajo">
+            </div>
+        </div>
+        <div class="rowform">
+            <div class="input">
+                <label for="remuneracion">Remuneración:</label>
+                <input type="text" placeholder="Ingrese remuneracion" id="remuneracion" name="remuneracion">
+            </div>
+            <div class="selectForm">
+                <label for="estado">Estado:</label>
+                <select name="estado" id="estado">
+                    <option value="1">Activo</option>
+                    <option value="0">Inactivo</option>
+                </select>
+            </div>
+        </div>
+        <div class="rowbutton">
+            <div class="btnForm">
+                <input type="submit" value="Registrar">
+            </div>
+        </div>
+        </form>
+      </div>
       
     
   </section>
