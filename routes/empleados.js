@@ -10,26 +10,17 @@ router.post('/empleados',async (req,res,next)=>{//el métod use recibe 3 paramat
     //res.sendFile(path.join(__dirname,'../','views','add-product.html')) 
    
     console.log(req.body.user)
-    user=req.body.user
-    let pass=req.body.pass
-        if(user==='stalin') {
-            if(pass==='123') {
+    
                 const usu =await Usuarios.find()
                 
                 res.render('menu',{'usu':usu})
-                //res.sendFile(path.join(rootDir,'views','add-vacaciones.html')) 
-            }else{
-                res.redirect('/')
-            }
-        }else{
-            res.redirect('/')
-        }
+             
    
 } )
 router.get('/empleados2',async(req,res,next)=>{
     const usu =await Usuarios.find()
     console.log(usu)
-                res.render('menu',{'usuario':user})   
+                res.render('menu',{'usu':usu})   
 } )
  
 module.exports=router

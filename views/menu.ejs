@@ -22,13 +22,7 @@
          <input type="text" placeholder="Search...">
          <span class="tooltip">Buscar</span>
       </li>
-      <!--<li>
-        <a href="#">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
-      </li>-->
+      
       <li>
        <a href="http://localhost:3000/empleados2">
          <i class='bx bx-user' ></i>
@@ -36,48 +30,7 @@
        </a>
        <span class="tooltip">Gestión Empleados</span>
      </li>
-   <!-- <li>
-       <a href="#">
-         <i class='bx bx-chat' ></i>
-         <span class="links_name">Messages</span>
-       </a>
-       <span class="tooltip">Messages</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-pie-chart-alt-2' ></i>
-         <span class="links_name">Analytics</span>
-       </a>
-       <span class="tooltip">Analytics</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-folder' ></i>
-         <span class="links_name">File Manager</span>
-       </a>
-       <span class="tooltip">Files</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-cart-alt' ></i>
-         <span class="links_name">Order</span>
-       </a>
-       <span class="tooltip">Order</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-heart' ></i>
-         <span class="links_name">Saved</span>
-       </a>
-       <span class="tooltip">Saved</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-cog' ></i>
-         <span class="links_name">Setting</span>
-       </a>
-       <span class="tooltip">Setting</span>
-     </li>-->
+  
      <li class="profile">
          <div class="profile-details">
            <img src="/images/profile.jpg" >
@@ -91,30 +44,50 @@
     </ul>
   </div>
   <section class="home-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="text">CRUEL ES BUENO</div>
-          <h1>Binvenido </h1>
+    
+      <div class="titlePage">
+        <h1>Gestión Empleados</h1>
+      </div>    
+      <div class="grid">
+        <div class="buscador">
+          <input type="text" placeholder="busqueda">
         </div>
-        <div>
-          <table>
-            <tr>
-              <th>Nombres</th>
-              <th>Apellidos</th>
-              <th>Cédula</th>
-            </tr>
-            <% for(var i=0;i < usu.length ;i++){ %>
-              <tr>
-                <th ><%=usu[i].nombres%></th>
-                <th ><%=usu[i].apellidos%></th>
-                <th ><%=usu[i].cedula%></th>
-              </tr>
-              <% }%>
-          </table>
+        <div class="btnAdd">
+          <button>Nuevo Registro</button>
         </div>
       </div>
-    </div>
+      <div class="table">
+        <table>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Cédula</th>
+            <th>Correo</th>
+            <th>Proceso</th>
+            <th>Subproceso</th>
+            <th>Puesto</th>
+            <th>Lugar de Trabajo</th>
+            <th>Remuneración</th>
+            <th>Estado</th> 
+            <th>Solicitud</th>
+           </tr>
+          <% for(var i=0;i < usu.length ;i++){ %>
+            <tr>
+              <td ><%=usu[i].nombres%></td>
+              <td ><%=usu[i].apellidos%></td>
+              <td ><%=usu[i].cedula%></td>
+              <td ><%=usu[i].correo%></td>
+              <td ><%=usu[i].proceso%></td>
+              <td ><%=usu[i].subproceso%></td>
+              <td ><%=usu[i].puesto%></td>
+              <td ><%=usu[i].lugarTrabajo%></td>
+              <td ><%=usu[i].remuneracionM%></td>
+              <td ><%=usu[i].estado%></td>
+              <td ><a href="http://localhost:3000/solicitud_vacaciones/<%=usu[i].idSolicitud%>">ver solicitud</a></td>
+            </tr>
+            <% }%>
+        </table>
+      </div>
     
     
   </section>

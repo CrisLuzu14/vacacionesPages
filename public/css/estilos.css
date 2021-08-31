@@ -247,6 +247,57 @@
        .container{
          padding: 10px 20px;
        }
+       .titlePage{
+         text-align: center;
+         padding: 10px;
+       }
+       .grid{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         padding: 20px;
+       }
+       .buscador input{
+          padding: 5px;
+          width: 50%;
+          border-radius: 5px;
+       }
+       .btnAdd{
+         text-align: right;
+
+       }
+       .btnAdd button{ 
+         background: green;
+         color: white;
+         border-radius: 5px;
+         padding: 5px;
+         box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+         margin-right: 10px;
+       }
+       .table table{
+         font-size: 10px;
+         padding: 15px;
+         margin: 10px;
+         border-spacing: 0px;
+       }
+       .table th{
+         color: white;
+         background: #11101D;
+       }
+       .table tr,.table th{
+       
+         border: 1px solid gray;
+         margin: 0;
+         padding: 5px;
+         text-align: left;
+         text-transform: capitalize;
+       }
+       .table td{
+        border: 1px solid gray;
+        margin: 0;
+        padding: 5px;
+         text-align: left;
+         text-transform: capitalize;  
+      }
        @media (max-width: 420px) {
          .sidebar li .tooltip{
            display: none;

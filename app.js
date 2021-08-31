@@ -14,7 +14,7 @@ const app =express();//llamas al metodo express
 const mongooseUrl='mongodb+srv://TalentHuman:TalentHuman@vacaciones.qspdv.mongodb.net/vacacionesTalentHuman?retryWrites=true&w=majority'
 mongoose.connect(mongooseUrl,{
     useNewUrlParser:true,
-    useUnifiedTopology:true,
+    useUnifiedTopology:true, 
 })
 mongoose.connection.on('connected',()=>{//MUESTRA MENSAJE SI CONNECCTION FUE OK
     console.log('mongoose connect')
@@ -33,9 +33,9 @@ app.use(express.static(__dirname+'/public'))//para poder usar los recursos como 
 app.use((req,res,next)=>{
     res.status(400).render('404')
     //res.status(404).sendFile(path.join(__dirname,'views','404.html'))
-})
+})  
 app.listen(3000)//de esta manera queda mas simple y ya no se necesita utilizar el require('http')
-// npm init -f
+// npm init -f 
 // npm install --save express
 // npm install --save-dev nodemon
 // agregar script package.json "start":"nodemon app.js"
