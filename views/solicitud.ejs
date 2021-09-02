@@ -152,21 +152,26 @@ table {
           <P class="mipar"> SOLICITUD DE TALENTO HUMANO</P>
             <tr>
                 <td colspan="7"> <img src="/images/abg.png" width="500" height="130"></td>
-                 <td  colspan="5"> ACCION DE PERSONAL <br> No. <br>ABG-UAH-ACP-2021- numero secuencial
-               <br> fecha automatico </td>
+                 <td  style="color:#FF0000"colspan="5"> ACCION DE PERSONAL <br> 
+                  No. <br>ABG-UAH-ACP-2021- numero secuencial ejemplo (001vac)
+                  <br> fecha automatico </td>
             </tr>
             
             <tr>
-         <TD colspan="12">
-     DECRETO: <label><input type="checkbox"></label>
-     ACUERDO: <label><input type="checkbox"> </label>
-     RESOLUCION: <label><input type="checkbox"> </label>
-        <br> 
-     NO.__________  FECHA:_______</td>
-            </tr>
-            
+          <TD colspan="1" style=" border: inset 0pt">DECRETO: <label><input type="checkbox"></label></TD>
+          <TD colspan="1" style=" border: inset 0pt">ACUERDO: <label><input type="checkbox"></label></TD>
+          <TD colspan="1" style=" border: inset 0pt">RESOLUCION: <label><input type="checkbox"></label></TD>
+          </tr>
+
+          <tr>
+            <TD colspan="1" style=" border: inset 0pt" ></TD>
+            <TD colspan="1" style=" border: inset 0pt" >NO.________________   </TD>
+            <TD colspan="1" style=" border: inset 0pt" >FECHA:________________ </TD>
+          </tr>
+          
+ 
             <tr>
-         <td style="text-align:center;"colspan="12">
+         <td  style="text-align:center; color:#FF0000" colspan="12">
          NOMBRE DEL EMPLEADO<br> 
          APELLIDOS NOMBRES </td>
             </tr> 
@@ -177,15 +182,16 @@ table {
             <td style="text-align:center" colspan="4">Hasta</td>
         </tr>
              <tr>
-            <td style="text-align:center" colspan="4">No de la base de datos</td>
+            <td style="text-align:center; color:#FF0000" colspan="4">No de la base de datos</td>
             <td style="text-align:center" colspan="4"><input type="date" id="calendar" name="calendar"></td>
             <td style="text-align:center" colspan="4"><input type="date" id="calendar" name="calendar"></td>
         </tr>
              
              <tr>
                <td colspan="12">EXPLICACIÒN: (Opcional:Adjuntar Anexo<br> 
-                La Directora Ejecutiva de la ABG en uso de sus facultades y de conformidad con el Art. <input type="text"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' style="width : 20px" id="art" name="art"> de la Ley Organica del Servicio Publico, y en concordancia con el Art. 28 del Reglamento a la LOSEP, se concede <input type="text" style="width : 250px" id="vca" name="vca">, segun Memorando Nro. <input type="text" style="width : 200px" id="memo" name="memo"> de fecha <input type="date" id="calendar" name="calendar">. </td>
-        </tr>
+                La Directora Ejecutiva de la ABG en uso de sus facultades y de conformidad con el Art. <input type="text"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' style="width : 20px" id="art" name="art"> de la Ley Organica del Servicio Publico, y en concordancia con el Art. 28 del Reglamento a la LOSEP, se concede <input type="text" style="width : 250px" id="vca" name="vca">, segun Memorando Nro. <input type="text" style="width : 200px" id="memo" name="memo"> de fecha <input type="text" id="funitalento" name="funitalento">. </p></td>
+              </tr>
+              <tr></tr>
              
              <tr>
       <TD colspan="1">
@@ -226,43 +232,44 @@ table {
               </tr>
              
               <tr>
-                 <tD colspan="5">SITUACION ACTUAL<BR> PROCESO: DATOS DE LA BD</td>
+                 <tD style="color:#FF0000" colspan="5">SITUACION ACTUAL<BR> PROCESO: DATOS DE LA BD</td>
                  <tD  colspan="7"> SITUACION PROPUESTA <BR> PROCESO: </td>
             </tr>
              
        <tr>
-       <tD colspan="5">SUBPROCESO: DATOS DE LA BD</td>
+       <tD style="color:#FF0000" colspan="5">SUBPROCESO: DATOS DE LA BD</td>
        <tD  colspan="7"> SUBPROCESO: </td>
        </tr>
              
        <tr>
-       <tD colspan="5">PUESTO: DATOS DE LA BD</td>
+       <tD style="color:#FF0000" colspan="5">PUESTO: DATOS DE LA BD</td>
        <tD  colspan="7">PUESTO: </td>
        </tr>      
         
        <tr>
-       <tD colspan="5">LUGAR DE TRABAJO: DATOS DE LA BD</td>
+       <tD style="color:#FF0000" colspan="5">LUGAR DE TRABAJO: DATOS DE LA BD</td>
        <tD  colspan="7">LUGAR DE TRABAJO: </td>
        </tr>
              
        <tr>
-       <tD colspan="5">REMUNERACION: DATOS DE LA BD</td>
+       <tD  style="color:#FF0000" colspan="5">REMUNERACION: DATOS DE LA BD</td>
        <tD  colspan="7">REMUNERACION:</td>
        </tr>    
         
        <tr>
-       <tD colspan="5">PARTIDA PRESUPUESTARIA: <BR> DATOS DE LA BD</td>
+       <tD style="color:#FF0000" colspan="5">PARTIDA PRESUPUESTARIA: <BR> 202104700000000010000000200051200000100000000-(codigo de partida)</td>
        <tD  colspan="7">PARTIDA PRESUPUESTARIA: <BR> </td>
        </tr>   
         
        <tr>
        <tD style="text-align:center" colspan="5">ACTA FINAL DEL CONCURSO<BR><BR>
        No. _________  Fecha: _________</td>
-       <tD style="text-align:center" colspan="7">PROCESO DE TALENTO HUMANO <BR><BR> f. __________________________<br> ESPACIO PARA PODER ESCRIBIR<BR>UNIDAD DE TALENTO HUMANO</td>
+       <tD style="text-align:center; color:#FF0000" colspan="7">PROCESO DE TALENTO HUMANO <BR><BR> f. __________________________<br> <input type="text" id="proc_talent" name="proc_talent" placeholder="espacio para poder escribir"><BR>UNIDAD DE TALENTO HUMANO</td>
        </tr>     
         
         <TR>
-        <tD style="text-align:center" colspan="12">DIOS, PATRIA Y LIBERTAD <BR><BR> f. __________________________<br> ESPACIO PARA PODER ESCRIBIR</td>
+        <tD style="text-align:center; color:#FF0000" colspan="12">DIOS, PATRIA Y LIBERTAD <BR><BR> 
+          f. __________________________<br> <input type="text" id="dios" name="dios" placeholder="espacio para poder escribir"></td>
        </tr>  
         
         <TR>
@@ -270,9 +277,10 @@ table {
        </tr>
         
         <tr>
-       <tD style="text-align:center" colspan="4">TALENTO HUMANO<BR><BR>
+       <tD style="text-align:center; color:#FF0000" colspan="4">TALENTO HUMANO<BR><BR>
        No. MISMO CODIGO SECUENCIAL DE ARRIBA  Fecha: MISMA FECHA QUE ARRIBA</td>
-       <tD style="text-align:center" colspan="4"><BR><BR><BR> f. ___________________<br><BR>RESPONSABLE DEL REGISTRO</td>
+       <tD style="text-align:center; color:#FF0000" colspan="4"><BR><BR><BR> f. ___________________<br>
+        <input type="text" id="resp_regis" name="resp_regis" placeholder="persona que hace login"></td>
        <tD style="text-align:center" colspan="4"><BR><BR><BR> f. ___________________<br><BR>SERVIDOR</td>
                     
        
