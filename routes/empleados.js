@@ -30,10 +30,9 @@ router.get('/gestion-empleado/:id',async(req,res,next)=>{
     console.log(usu)
                 res.render('formEmpleado',{'usu':usu})   
 } )
-router.get('/gestion-empleado/consulta/:dato',async(req,res,next)=>{
-    const dato =req.params.dato
-    const usu =await Usuarios.find({cedula:dato})
- console.log(usu);
-                res.send(usu)   
-} )
+router.get('/consulta',async(req,res,next)=>{
+  
+const usu =await Usuarios.find({})
+                res.send(usu)
+})
 module.exports=router
