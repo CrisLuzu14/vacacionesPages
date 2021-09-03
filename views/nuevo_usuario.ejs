@@ -7,7 +7,10 @@
         <link rel="stylesheet" href="style.css">
         <!-- Boxicons CDN Link -->
         <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
        </head>
 
        <style>
@@ -29,6 +32,7 @@
         transition:background .3s;
         -webkit-transition:background .3s;
 }
+
 
 .button:hover{
   background:#2288bb;
@@ -120,95 +124,107 @@ hr {
   </style>
 
 
-    <body>
-      <div class="sidebar">
-        <div class="logo-details">
-          <i class='bx bxl-c-plus-plus icon'></i>
-            <div class="logo_name">CodingLab</div>
-            <i class='bx bx-menu' id="btn" ></i>
-        </div>
-        <ul class="nav-list">
-          <li>
-              <i class='bx bx-search' ></i>
-             <input type="text" placeholder="Search...">
-             <span class="tooltip">Search</span>
-          </li>
-          <li>
-            <a href="/listado.ejs">
-              <i class='bx bx-grid-alt'></i>
-              <span class="links_name">Lista de Empleados</span>
-            </a>
-             <span class="tooltip">Lista de Empleados</span>
-          </li>
-          <li>
-           <a href="/nuevo_usuario.ejs">
-             <i class='bx bx-user' ></i>
-             <span class="links_name">Usuarios</span>
-           </a>
-           <span class="tooltip">Usuarios</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-chat' ></i>
-             <span class="links_name">Solicitudes</span>
-           </a>
-           <span class="tooltip">Solicitudes</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-pie-chart-alt-2' ></i>
-             <span class="links_name">Analytics</span>
-           </a>
-           <span class="tooltip">Analytics</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-folder' ></i>
-             <span class="links_name">File Manager</span>
-           </a>
-           <span class="tooltip">Files</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-cart-alt' ></i>
-             <span class="links_name">Order</span>
-           </a>
-           <span class="tooltip">Order</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-heart' ></i>
-             <span class="links_name">Saved</span>
-           </a>
-           <span class="tooltip">Saved</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-cog' ></i>
-             <span class="links_name">Setting</span>
-           </a>
-           <span class="tooltip">Setting</span>
-         </li>
-         <li class="profile">
-             <div class="profile-details">
-               <img src="profile.jpg" alt="profileImg">
-               <div class="name_job">
-                 <div class="name">Prem Shahi</div>
-                 <div class="job">Web designer</div>
-               </div>
-             </div>
-             <i class='bx bx-log-out' id="log_out" ></i>
-         </li>
-        </ul>
-      </div>
-      <section class="home-section">
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">CodingLab</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="listado.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Lista de Empleados</span>
+        </a>
+         <span class="tooltip">Lista de Empleados</span>
+      </li>
+      <li>
+       <a href="nuevo_usuario.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Usuarios</span>
+       </a>
+       <span class="tooltip">Usuarios</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Solicitudes</span>
+       </a>
+       <span class="tooltip">Solicitudes</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">File Manager</span>
+       </a>
+       <span class="tooltip">Files</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Order</span>
+       </a>
+       <span class="tooltip">Order</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Saved</span>
+       </a>
+       <span class="tooltip">Saved</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
         <div id="login"><br><br>
-          <h1>Formulario de Registro</h1>
+          <h1>Registro de Empleado Nuevo</h1>
           <form>
-            <input type="box" placeholder="Ingresar Cedula de Identidad" />
-            <input type="box" placeholder="Ingresar sus Nombres" />
-            <input type="box" placeholder="Ingresar sus Apellidos" />
-            <input type="box" placeholder="Ingresar su Correo Electronico" />
+            <input type="box" placeholder="Partida" />
+            <input type="box" placeholder="Cedula" />
+            <input type="box" placeholder="Apellidos" />
+            <input type="box" placeholder="Nombres" />
+            <input type="box" placeholder="F.I.G" />
+            <input type="box" placeholder="Modalidad" />
+            <input type="box" placeholder="Lugar" />
+            <input type="box" placeholder="Denominación del puesto" />
+            <input type="box" placeholder="Vigencia del nombramiento" />
+            <input type="box" placeholder="Proceso" />
+            <input type="box" placeholder="Subproceso" />
+            <input type="box" placeholder="Lugar de trabajo" />
+            <input type="box" placeholder="Puesto" />
+            <input type="box" placeholder="Remuneración Mensual" />
+            <input type="box" placeholder="Correo Electrónico" />
+            <button type="button" class="btn btn-primary">Registrar</button>
           </form>
         </div>
       </section>
