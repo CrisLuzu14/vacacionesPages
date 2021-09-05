@@ -20,7 +20,7 @@ const UsuariosSchema = new mongoose.Schema({
    estado:String,
    idSolicitud:String,
    idUsuario:String,
-   IdRoles:Object
+   idRoles:String
 
 })
 

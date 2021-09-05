@@ -64,15 +64,19 @@ fetch("http://localhost:3000/consulta/")
     a2.appendChild(i2)
     td.appendChild(a2)
     tr.appendChild(td)
+    var td4=document.createElement("td");
+    td4.textContent=dat[i].cedula
+    tr.appendChild(td4)
+    var td15=document.createElement("td");
+    td15.textContent=dat[i].idRoles
+    tr.appendChild(td15)
     var td2=document.createElement("td");
     td2.textContent=dat[i].nombres
     tr.appendChild(td2)
     var td3=document.createElement("td");
     td3.textContent=dat[i].apellidos
     tr.appendChild(td3)
-    var td4=document.createElement("td");
-    td4.textContent=dat[i].cedula
-    tr.appendChild(td4)
+  
     var td5=document.createElement("td");
     td5.textContent=dat[i].correo
     tr.appendChild(td5)
@@ -80,17 +84,14 @@ fetch("http://localhost:3000/consulta/")
     td6.textContent=dat[i].proceso
     tr.appendChild(td6)
     var td7=document.createElement("td");
-    td7.textContent=dat[i].subproceso
+    td7.textContent=dat[i].modalidad
     tr.appendChild(td7)
     var td8=document.createElement("td");
     td8.textContent=dat[i].puesto
     tr.appendChild(td8)
     var td9=document.createElement("td");
-    td9.textContent=dat[i].lugarTrabajo
+    td9.textContent=dat[i].l_trabajo
     tr.appendChild(td9)
-    var td10=document.createElement("td");
-    td10.textContent=dat[i].remuneracionM
-    tr.appendChild(td10)
     var td11=document.createElement("td"); 
     td11.style="text-align: center;";
     var i3=document.createElement("i"); 

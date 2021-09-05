@@ -66,33 +66,34 @@
         <table>
           <tr>
             <th>Acciones</th>
+            <th>Cédula</th>
+            <th>Rol</th>
             <th>Nombres</th>
             <th>Apellidos</th>
-            <th>Cédula</th>
             <th>Correo</th>
             <th>Proceso</th>
-            <th>Subproceso</th>
+            <th>Modalidad</th>
             <th>Puesto</th>
             <th>Lugar de Trabajo</th>
-            <th>Remuneración</th>
             <th>Estado</th> 
            </tr>
            <tbody id="tbody">
             <% for(var i=0;i < usu.length ;i++){ %>
+              
               <tr>
                 <td class="acciones"><a title="Editar Empleado" href="http://localhost:3000/gestion-empleado/<%=usu[i]._id%>"><i class='bx bx-edit'></i></a>
                   <a title="Solicitud Vacaciones" href="http://localhost:3000/solicitud_vacaciones/<%=usu[i].idSolicitud%>"><i class='bx bxs-file-doc' ></i></a>
                 </td>
-                <td ><%=usu[i].nombres%></td>
-                <td ><%=usu[i].apellidos%></td>
-                <td ><%=usu[i].cedula%></td>
-                <td ><%=usu[i].correo%></td>
-                <td ><%=usu[i].proceso%></td>
-                <td ><%=usu[i].subproceso%></td>
-                <td ><%=usu[i].puesto%></td>
-                <td ><%=usu[i].lugarTrabajo%></td>
-                <td ><%=usu[i].remuneracionM%></td>
-                <td style="text-align: center;"><%if(usu[i].estado=='1'){%><i title="Empleado Activo" class='cGreen bx bx-checkbox-checked' ></i><%}else{%><i title="Empleado Inactivo"  class='cRed bx bx-x-circle' ></i><%}%></td>
+                <td class="Capitalize"><%=usu[i].cedula%></td>
+                <td class="Capitalize"><%=usu[i].idRoles%></td>
+                <td class="Capitalize"><%=usu[i].nombres%></td>
+                <td class="Capitalize"><%=usu[i].apellidos%></td>
+                <td class="Capitalize"><%=usu[i].correo%></td>
+                <td class="Capitalize"><%=usu[i].proceso%></td>
+                <td class="Capitalize"><%=usu[i].modalidad%></td>
+                <td class="Capitalize"><%=usu[i].puesto%></td>
+                <td class="Capitalize"><%=usu[i].l_trabajo%></td>
+                <td class="Capitalize"style="text-align: center;"><%if(usu[i].estado=='1'){%><i title="Empleado Activo" class='cGreen bx bx-checkbox-checked' ></i><%}else{%><i title="Empleado Inactivo"  class='cRed bx bx-x-circle' ></i><%}%></td>
               </tr>
               <% }%>
            </tbody>
