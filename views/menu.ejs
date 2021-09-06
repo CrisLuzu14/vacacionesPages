@@ -59,7 +59,8 @@
           <a title="Agregar nuevo empledo" href="http://localhost:3000/gestion-empleado/"><i class='bx bxs-user-plus' ></i></a>
         </div>
         <div class="buscador">
-          <input id="InpBuscar" type="text" placeholder="busqueda">
+          <input id="InpBuscar" type="text" placeholder="Buscar por ">
+          <small>nombres, apellidos, cédula y rol</small>
         </div>
       </div>
       <div class="table">
@@ -82,7 +83,7 @@
               
               <tr>
                 <td class="acciones"><a title="Editar Empleado" href="http://localhost:3000/gestion-empleado/<%=usu[i]._id%>"><i class='bx bx-edit'></i></a>
-                  <a title="Solicitud Vacaciones" href="http://localhost:3000/solicitud_vacaciones/<%=usu[i].idSolicitud%>"><i class='bx bxs-file-doc' ></i></a>
+                  <a title="Solicitud Vacaciones" href="http://localhost:3000/solicitud_vacaciones/<%=usu[i]._id%>"><i class='bx bxs-file-doc' ></i></a>
                 </td>
                 <td class="Capitalize"><%=usu[i].cedula%></td>
                 <td class="Capitalize"><%=usu[i].idRoles%></td>
