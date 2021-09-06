@@ -11,16 +11,9 @@
   "author": "sta",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "express": "^4.17.1",
-    "express-handlebars": "^5.3.3",
-    "firebase-admin": "^9.11.1",
-    "morgan": "^1.10.0"
-=======
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^6.0.2"
->>>>>>> dev/soriano
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
