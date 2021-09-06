@@ -1,31 +1,40 @@
 //const path= require('path')
 const express = require('express')
 //const rootDir = require('../util/path')
-const Usuarios=require('../model/usuariosModel')
+
 const router=express.Router()
+const Usuarios=require('../model/usuariosModel')
 let user=null;
 router.post('/empleados',async (req,res,next)=>{//el métod use recibe 3 paramatros req,res,next
-    //para enviar información al servidor usamos la función send()
-    //res.sendFile(path.join(__dirname,'../','views','add-product.html')) 
-    console.log(req.body.user)
-    user=req.body.user
-    let pass=req.body.pass
-        if(user==='stalin') {
-            if(pass==='123') {
-               const usuarios =await Usuarios.find()
-                console.log(usuarios)
-                res.render('menu',{'usuario':user})
-                //res.sendFile(path.join(rootDir,'views','add-vacaciones.html')) 
-            }else{
-                res.redirect('/')
-            }
-        }else{
-            res.redirect('/')
-        }
-   
+    
+        const usu =await Usuarios.find().sort({apellidos:1})
+        //console.log(usu)
+        res.render('menu',{'usu':usu})
+    
 } )
-router.get('/empleados2',(req,res,next)=>{
-                res.render('menu',{'usuario':user})   
+router.get('/empleados2',async(req,res,next)=>{
+    const usu =await Usuarios.find().sort({apellidos:1})
+        //console.log(usu)
+        res.render('menu',{'usu':usu})  
 } )
- 
+router.get('/gestion-empleado',(req,res,next)=>{
+    res.render('formEmpleado',)   
+} )
+router.get('/gestion-empleado/:id',async(req,res,next)=>{
+    const id =req.params.id
+    
+    const usu =await Usuarios.find({_id:id})
+    
+    res.render('menu',{'usu':usu})   
+} )
+router.get('/consulta',async(req,res,next)=>{
+  
+const usu =await Usuarios.find({}).sort({apellidos:1})
+                res.send(usu)
+})
+router.get('/consulta/:id',async(req,res,next)=>{
+  
+    const usu =await Usuarios.find({_id:req.params.id})
+                    res.send(usu)
+    })
 module.exports=router

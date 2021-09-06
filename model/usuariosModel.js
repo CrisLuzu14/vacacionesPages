@@ -1,18 +1,26 @@
 const mongoose= require('mongoose')
 
 const UsuariosSchema = new mongoose.Schema({
-   nombres: String,
-   apellidos: String,
+   iduser:String,
+   partida:String,
    cedula: String,
-   correo: String,
-   proceso: String,
+   apellidos: String,
+   nombres: String,
+   fig:String,
+   modalidad:String,
+   lugar:String,
+   puestoD:String,
+   fv_nombramiento:String,
+   proceso:String,
    subproceso:String,
+   l_trabajo:String,
    puesto:String,
-   lugarTrabajo:String,
-   remuneracionM:String,
+   rmu:String,
+   correo:String,
    estado:String,
-   idUsuario:Object,
-   idSolicitud:Object,
+   idSolicitud:String,
+   idUsuario:String,
+   idRoles:String
 
 })
 
