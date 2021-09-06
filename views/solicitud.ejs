@@ -536,8 +536,21 @@ tr:hover {
         let fecha = now.format('LL')
         document.getElementById('fechaAutomtica1').textContent = fecha;
     
-       document.getElementById('codigoyfecha').textContent= 'N°. ABG-UAH-ACP-2021-001vac Fecha: ' + fecha;
+       
+       for (var i = 0; i < checkboxs.length; i++) {
+              if (checkboxs[i].value == 'VACACIONES') {
+                
+                checkboxs[i].checked = 1;
+              document.getElementById('contentCheck').innerHTML = 'EXPLICACIÒN: (Opcional:Adjuntar Anexo<br>' +
+                ' La Directora Ejecutiva de la ABG en uso de sus facultades y de conformidad con el Art. 29 de la ' +
+                'Ley Organica del Servicio Publico, y en concordancia con el Art. 28 del Reglamento a la LOSEP, se concede ' +
+                'VACACIONES, segun Memorando Nro. <input type="text" style="width : 200px" id="memo" placeholder="memorando" ' +
+                ' name="memo"> de fecha <input type="date" id="funitalento" name="funitalento" placeholder="fecha">. </p>';
+                document.getElementById('codigoSec').textContent="N°. ABG-UAH-ACP-2021-001vac";
+                document.getElementById('codigoyfecha').textContent= 'N°. ABG-UAH-ACP-2021-001vac Fecha: ' + fecha;
+            } 
         }
+      }
 
       })
   </script>
